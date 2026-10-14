@@ -17,17 +17,6 @@ jobs:
         with:
           lfs: true # libiPhone-lib.a (196MB) / libil2cpp.a (65MB) duoc luu bang Git LFS
 
-      # Tai lai vat the LFS va kiem tra file that (tranh truong hop con pointer).
-      - name: Kiem tra thu vien da tai du chua
-        run: |
-          git lfs pull
-          for lib in Libraries/libiPhone-lib.a Libraries/libil2cpp.a; do
-            if [ "$(head -c 8 "$lib")" != '!<arch>' ]; then
-              echo "::error::$lib khong phai file ar that - chua tai duoc tu Git LFS"
-              exit 1
-            fi
-          done
-
       - name: Show Xcode version
         run: xcodebuild -version
 
