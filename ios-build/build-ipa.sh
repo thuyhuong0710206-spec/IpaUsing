@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+ARCHIVE="$OUT/NgocRong5SaoChamCom.xcarchive"#!/usr/bin/env bash
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -10,7 +10,7 @@ TEAM="${DEVELOPMENT_TEAM:-}"
 BUNDLE_ID="${BUNDLE_ID:-com.DefaultCompany.DragonBoy002}"
 BUILD_NUMBER="${BUILD_NUMBER:-1}"
 OUT="$ROOT/ios-build/out"
-ARCHIVE="$OUT/NroChamPa.xcarchive"
+ARCHIVE="$OUT/NgocRong5SaoChamCom.xcarchive"
 EXPORT_DIR="$OUT/ipa"
 APP_NAME="NgocRong5SaoChamCom"
 
