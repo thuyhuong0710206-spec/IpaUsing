@@ -62,11 +62,11 @@ if [[ "$METHOD" == "unsigned" ]]; then
     exit 1
   }
 
-  rm -rf "$OUT/Payload" "$OUT/$APP_NAME-unsigned.ipa"
+  
   mkdir -p "$OUT/Payload"
   cp -R "$APP" "$OUT/Payload/"
-  (cd "$OUT" && zip -qry "$APP_NAME-unsigned.ipa" Payload)
-  rm -rf "$OUT/Payload"
+  ditto "$APP" "$OUT/Payload/$APP_NAME.app"
+(cd "$OUT" && /usr/bin/zip -qry "$APP_NAME-unsigned.ipa" Payload)
 
   echo "==> Xong: $OUT/$APP_NAME-unsigned.ipa"
   exit 0
