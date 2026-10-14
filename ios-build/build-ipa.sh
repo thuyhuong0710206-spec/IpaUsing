@@ -12,7 +12,7 @@ BUILD_NUMBER="${BUILD_NUMBER:-1}"
 OUT="$ROOT/ios-build/out"
 ARCHIVE="$OUT/NroChamPa.xcarchive"
 EXPORT_DIR="$OUT/ipa"
-APP_NAME="NroChamPa"
+APP_NAME="NgocRong5SaoChamCom"
 
 if [[ "$(uname -s)" != "Darwin" ]]; then
   echo "LOI: script nay phai chay tren macOS co Xcode." >&2
